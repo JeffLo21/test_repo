@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>PDF 浮水印工具</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="panel">
+  <h1>PDF 浮水印工具</h1>
+
+  <div class="field-row">
+    <label for="pdf-input">要加浮水印的 PDF：</label>
+    <input type="file" id="pdf-input" accept="application/pdf">
+  </div>
+
+  <div class="field-row">
+    <label for="output-name">輸出檔名：</label>
+    <input type="text" id="output-name" disabled>
+  </div>
+
+  <div class="field-row">
+    <label for="watermark-text">浮水印文字：</label>
+    <input type="text" id="watermark-text" value="Confidential">
+  </div>
+
+  <div class="button-row">
+    <button id="start-btn" disabled>開始</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="result-area"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

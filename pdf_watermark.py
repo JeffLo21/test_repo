@@ -4,6 +4,7 @@
 #     "pypdf>=5.0",
 #     "reportlab>=4.0",
 #     "pillow>=10.0",
+#     "flask>=3.0",
 # ]
 # ///
 
@@ -11,6 +12,9 @@
 
 import argparse
 import io
+import re
+import sys
+import uuid
 from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
@@ -135,7 +139,103 @@ def add_watermark(input_path: Path, output_path: Path, pages_spec: str, build_ov
         writer.write(f)
 
 
+CACHE_DIR = Path(__file__).resolve().parent / "cache"
+FRONT_END_DIR = Path(__file__).resolve().parent / "front_end"
+_ILLEGAL_CHARS = re.compile(r'[\\/:*?"<>|\x00-\x1f]')
+
+UPLOADS: dict[str, Path] = {}
+RESULTS: dict[str, tuple[Path, str]] = {}
+
+
+def safe_display_stem(name: str) -> str:
+    stem = Path(name).stem
+    stem = _ILLEGAL_CHARS.sub("_", stem)
+    stem = stem.strip().strip(".") or "watermark"
+    return stem[:100]
+
+
+def create_app():
+    from flask import Flask, jsonify, request, send_file
+
+    app = Flask(__name__, static_folder=str(FRONT_END_DIR), static_url_path="")
+
+    @app.get("/")
+    def index():
+        return app.send_static_file("index.html")
+
+    @app.post("/api/upload")
+    def upload():
+        file = request.files.get("pdf")
+        if not file or not file.filename.lower().endswith(".pdf"):
+            return jsonify({"error": "請上傳一個 .pdf 檔案"}), 400
+
+        file_id = uuid.uuid4().hex
+        saved_path = CACHE_DIR / f"{file_id}.pdf"
+        file.save(saved_path)
+
+        try:
+            PdfReader(saved_path)
+        except Exception:
+            saved_path.unlink(missing_ok=True)
+            return jsonify({"error": "不是有效的 PDF 檔案"}), 400
+
+        UPLOADS[file_id] = saved_path
+        return jsonify({"file_id": file_id, "stem": safe_display_stem(file.filename)})
+
+    @app.post("/api/watermark")
+    def watermark():
+        data = request.get_json(silent=True) or {}
+        file_id = data.get("file_id")
+        input_path = UPLOADS.get(file_id)
+        if not input_path:
+            return jsonify({"error": "找不到上傳的檔案，請重新上傳"}), 404
+
+        text = (data.get("text") or "").strip() or "Confidential"
+        output_name = safe_display_stem(data.get("output_name") or "watermark")
+        download_name = f"{output_name}.pdf"
+
+        result_id = uuid.uuid4().hex
+        result_path = CACHE_DIR / f"{result_id}.pdf"
+
+        def build_overlay(width, height):
+            return build_text_overlay(width, height, text, 0.3, 45, 40, "gray", "center", None)
+
+        try:
+            add_watermark(input_path, result_path, "all", build_overlay)
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+        RESULTS[result_id] = (result_path, download_name)
+        return jsonify({
+            "result_id": result_id,
+            "download_name": download_name,
+            "download_url": f"/api/download/{result_id}",
+        })
+
+    @app.get("/api/download/<result_id>")
+    def download(result_id):
+        entry = RESULTS.get(result_id)
+        if not entry or not entry[0].exists():
+            return jsonify({"error": "找不到處理結果，請重新處理"}), 404
+        result_path, download_name = entry
+        return send_file(result_path, mimetype="application/pdf",
+                          as_attachment=True, download_name=download_name)
+
+    return app
+
+
+def run_web_server():
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    app = create_app()
+    print("Watermark web UI running at http://127.0.0.1:5050")
+    app.run(host="127.0.0.1", port=5050, threaded=True)
+
+
 def main():
+    if len(sys.argv) == 1:
+        run_web_server()
+        return
+
     parser = argparse.ArgumentParser(description="Add a text or image watermark to a PDF.")
     parser.add_argument("input", type=Path, help="Input PDF file")
     parser.add_argument("-o", "--output", type=Path, help="Output PDF file (default: <input>_wm.pdf)")
