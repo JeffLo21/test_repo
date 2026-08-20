@@ -1,3 +1,29 @@
+const THEME_KEY = "pdf-watermark-theme";
+const themeToggle = document.getElementById("theme-toggle");
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.textContent = theme === "light" ? "🌙" : "☀️";
+}
+
+function initTheme() {
+  const stored = localStorage.getItem(THEME_KEY);
+  if (stored === "light" || stored === "dark") {
+    applyTheme(stored);
+    return;
+  }
+  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+  applyTheme(prefersLight ? "light" : "dark");
+}
+
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+  applyTheme(next);
+  localStorage.setItem(THEME_KEY, next);
+});
+
+initTheme();
+
 const pdfInput = document.getElementById("pdf-input");
 const outputName = document.getElementById("output-name");
 const watermarkText = document.getElementById("watermark-text");

@@ -20,8 +20,6 @@ This machine's network intercepts TLS for PyPI, so `uv` needs system certs. This
 uv run --system-certs pdf_watermark.py input.pdf
 ```
 
-Key CLI options: `--text` (default `"Confidential"` if neither `--text` nor `--image` given), `--image`, `--opacity`, `--rotation`, `--font-size`, `--font`, `--color`, `--scale` (image only), `--position` (`center`/`tile`/four corners — `tile` is text-only), `--pages` (e.g. `"1,3,5-7"`, default `all`), `-o/--output` (default `<input>_wm.pdf`).
-
 ## Architecture
 
 The script has one core pipeline, `add_watermark()`, that pypdf drives page-by-page:
