@@ -47,3 +47,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-08-25T23:05:52+08:00,NVDA,209.93,-4.79,-2.2%,https://www.cnn.com/markets/stocks/NVDA
 2026-08-26T01:07:19+08:00,QCOM,158.53,-2.22,-1.38%,https://www.cnn.com/markets/stocks/QCOM
 2026-08-26T01:07:19+08:00,NVDA,209.93,-4.79,-2.23%,https://www.cnn.com/markets/stocks/NVDA
+2026-08-26T02:06:48+08:00,QCOM,160.47,2.05,1.29%,https://www.investing.com/equities/qualcomm-inc
+2026-08-26T02:06:48+08:00,NVDA,208.48,-6.24,-2.91%,https://www.investing.com/equities/nvidia-corp
