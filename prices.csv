@@ -85,3 +85,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-08-28T22:08:35+08:00,NVDA,226.15,18.32,8.74%,https://www.cnn.com/markets/stocks/NVDA
 2026-08-28T23:07:50+08:00,QCOM,164.14,1.11,0.68%,https://www.cnn.com/markets/stocks/QCOM
 2026-08-28T23:07:50+08:00,NVDA,227.98,18.32,8.74%,https://www.nasdaq.com/market-activity/stocks/nvda
+2026-08-29T00:06:03+08:00,QCOM,163.72,1.11,0.68%,https://www.cnbc.com/quotes/QCOM
+2026-08-29T00:06:03+08:00,NVDA,226.15,-1.59,-0.70%,https://www.cnbc.com/quotes/NVDA
