@@ -145,3 +145,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-09-04T01:05:03+08:00,NVDA,227.35,2.94,1.31%,https://stockanalysis.com/stocks/nvda/
 2026-09-04T02:04:46+08:00,QCOM,169.96,3.35,2.01%,https://stockanalysis.com/stocks/qcom/
 2026-09-04T02:04:46+08:00,NVDA,227.51,3.10,1.38%,https://finance.yahoo.com/technology/live/tech-stocks-today-apple-ceo-steps-down-nvidia-mag-7-145623375.html
+2026-09-04T03:05:20+08:00,QCOM,169.96,3.35,2.01%,https://finance.yahoo.com/quote/QCOM/
+2026-09-04T03:05:20+08:00,NVDA,227.35,2.94,1.31%,https://finance.yahoo.com/quote/NVDA/
