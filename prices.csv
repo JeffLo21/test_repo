@@ -189,3 +189,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-09-09T02:05:07+08:00,NVDA,230.36,1.91,0.84%,https://www.cnbc.com/quotes/NVDA
 2026-09-09T03:04:11+08:00,QCOM,168.74,0.17,0.10%,https://www.cnbc.com/quotes/QCOM
 2026-09-09T03:04:11+08:00,NVDA,230.36,1.91,0.84%,https://www.cnbc.com/quotes/NVDA
+2026-09-09T04:05:56+08:00,QCOM,180.41,11.67,6.92%,https://www.benzinga.com/trading-ideas/movers/26/09/61657926/qualcomm-stock-rises-after-multi-generation-ai-chip-deal-with-amazon
+2026-09-09T04:05:56+08:00,NVDA,231.47,1.11,0.48%,https://www.investing.com/equities/nvidia-corp
