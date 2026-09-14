@@ -233,3 +233,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-09-12T04:05:44+08:00,NVDA,221.74,3.04,1.39%,https://robinhood.com/us/en/stocks/NVDA/
 2026-09-14T22:06:06+08:00,QCOM,182.15,5.09,2.88%,https://www.investing.com/equities/qualcomm-inc
 2026-09-14T22:06:06+08:00,NVDA,218.29,-0.07,-0.03%,https://www.investing.com/equities/nvidia-corp
+2026-09-14T23:06:15+08:00,QCOM,181.97,5.09,2.88%,https://www.investing.com/equities/qualcomm-inc
+2026-09-14T23:06:15+08:00,NVDA,218.29,-7.47,-3.42%,https://www.investing.com/equities/nvidia-corp
