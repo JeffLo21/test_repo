@@ -335,3 +335,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-09-24T01:16:10+08:00,NVDA,228.65,1.27,0.56%,https://www.cnbc.com/quotes/NVDA
 2026-09-24T02:17:52+08:00,QCOM,198.10,3.87,1.99%,https://www.tradingkey.com/analysis/stocks/us-stocks/262181648-qualcomm-stock-forecast-next-gen-snapdragon-chips-qcom-tradingkey
 2026-09-24T02:17:52+08:00,NVDA,228.87,1.49,0.66%,https://stockanalysis.com/stocks/nvda/
+2026-09-24T03:16:10+08:00,QCOM,193.42,-0.81,-0.42%,https://finance.yahoo.com/quote/QCOM/
+2026-09-24T03:16:10+08:00,NVDA,229.12,1.74,0.77%,https://finance.yahoo.com/quote/NVDA/
