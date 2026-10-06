@@ -459,3 +459,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-10-07T01:17:06+08:00,NVDA,241.53,2.63,1.10%,https://stockanalysis.com/stocks/nvda/
 2026-10-07T02:18:04+08:00,QCOM,180.12,-0.67,-0.37%,https://finance.yahoo.com/quote/QCOM/
 2026-10-07T02:18:04+08:00,NVDA,240.14,1.24,0.52%,https://finance.yahoo.com/quote/NVDA/
+2026-10-07T03:16:12+08:00,QCOM,182.55,-2.33,-1.26%,https://stockanalysis.com/stocks/qcom/
+2026-10-07T03:16:12+08:00,NVDA,241.79,2.89,1.21%,https://stockanalysis.com/stocks/nvda/
