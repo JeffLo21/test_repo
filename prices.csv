@@ -485,3 +485,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-10-09T00:17:31+08:00,NVDA,234.50,-2.85,-1.20%,https://www.morningstar.com/stocks/xnas/nvda/quote
 2026-10-09T01:16:26+08:00,QCOM,174.20,-2.92,-1.65%,https://finance.yahoo.com/quote/QCOM/
 2026-10-09T01:16:26+08:00,NVDA,235.60,-1.87,-0.79%,https://finance.yahoo.com/quote/NVDA/
+2026-10-09T02:18:00+08:00,QCOM,173.64,-3.47,-1.97%,https://www.fool.com/investing/2026/10/07/prediction-a-1000-investment-in-qualcomm-today-cou
+2026-10-09T02:18:00+08:00,NVDA,230.32,-7.15,-3.01%,https://www.google.com/finance/quote/NVDA:NASDAQ
