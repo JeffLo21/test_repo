@@ -477,3 +477,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-10-08T03:17:53+08:00,NVDA,236.75,-2.49,-1.04%,https://www.google.com/finance/quote/NVDA:NASDAQ
 2026-10-08T04:17:12+08:00,QCOM,176.44,-4.60,-2.54%,https://www.fool.com/coverage/better-buy/2026/10/07/qualcomm-vs-taiwan-semiconductor-manufacturing-which-technology-stock-is-a-better-buy-in-2026
 2026-10-08T04:17:12+08:00,NVDA,237.78,-1.46,-0.61%,https://finance.yahoo.com/quote/NVDA/
+2026-10-08T22:18:17+08:00,QCOM,177.12,-3.91,-2.16%,https://www.cnbc.com/quotes/QCOM
+2026-10-08T22:18:17+08:00,NVDA,237.47,-1.77,-0.74%,https://www.cnbc.com/quotes/NVDA
