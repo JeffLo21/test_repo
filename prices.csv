@@ -525,3 +525,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-10-14T00:18:17+08:00,NVDA,225.06,-1.26,-0.56%,https://finance.yahoo.com/quote/NVDA/
 2026-10-14T01:19:30+08:00,QCOM,174.09,5.35,3.17%,https://www.investsmart.com.au/security/nasdaq/qcom/qualcomm/share-price
 2026-10-14T01:19:30+08:00,NVDA,219.74,5.27,2.34%,https://www.investsmart.com.au/security/nasdaq/nvda/nvidia-corp/share-price
+2026-10-14T02:16:55+08:00,QCOM,174.43,-1.07,-0.61%,https://finance.yahoo.com/quote/QCOM/
+2026-10-14T02:16:55+08:00,NVDA,226.32,-2.96,-1.29%,https://stockanalysis.com/stocks/nvda/
