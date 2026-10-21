@@ -607,3 +607,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-10-21T23:06:49+08:00,NVDA,219.01,2.54,1.17%,https://finance.yahoo.com/quote/NVDA/
 2026-10-22T00:06:30+08:00,QCOM,175.71,2.18,1.26%,https://www.indmoney.com/us-stocks/qualcomm-incorporated-share-price-qcom
 2026-10-22T00:06:30+08:00,NVDA,220.42,3.95,1.82%,https://finance.yahoo.com/quote/NVDA/
+2026-10-22T01:06:11+08:00,QCOM,174.84,1.31,0.75%,https://stockanalysis.com/stocks/qcom/
+2026-10-22T01:06:11+08:00,NVDA,220.99,4.52,2.09%,https://stockanalysis.com/stocks/nvda/
