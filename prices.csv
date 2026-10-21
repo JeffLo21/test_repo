@@ -609,3 +609,5 @@ timestamp,ticker,price,change,change_percent,source
 2026-10-22T00:06:30+08:00,NVDA,220.42,3.95,1.82%,https://finance.yahoo.com/quote/NVDA/
 2026-10-22T01:06:11+08:00,QCOM,174.84,1.31,0.75%,https://stockanalysis.com/stocks/qcom/
 2026-10-22T01:06:11+08:00,NVDA,220.99,4.52,2.09%,https://stockanalysis.com/stocks/nvda/
+2026-10-22T02:06:01+08:00,QCOM,178.35,2.64,1.50%,https://stocktwits.com/symbol/QCOM
+2026-10-22T02:06:01+08:00,NVDA,221.35,4.88,2.25%,https://www.fool.com/investing/2026/10/21/micron-and-nvidia-are-the-2-biggest-drivers-of-s-and-p-500-earnings-growth-are-their-stocks-buys/
